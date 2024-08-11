@@ -1,0 +1,93 @@
+main{
+    width: 90%;
+    margin:50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+    gap: 80px;
+    // @include flexBox(row, wrap, center, center);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    .one{
+        width: 90%;
+        height: 600px;
+        background-color:map-get($cards , '--cards-bg-color' ) ;
+        border: 1px solid rgb(167, 166, 166);
+        display: flex;
+        justify-content: space-evenly;
+        align-items:center;
+        box-shadow: 0 0 5px 5px map-get($buttons , '--dark-head' );
+        transition: all 1s ease-in;
+
+        &:hover{
+            box-shadow:none;
+            transform: scale(1.05);
+        }
+    }
+    .one div:nth-child(1){
+        margin-left: 30px;
+    }
+    .one div:nth-child(1) h2{
+        font-size: 30px;
+        margin-bottom: 20px;
+
+    }
+    .one div:nth-child(1) p{
+        font-size: 24px;
+        color:map-get($textdecorate , '--description-texts' )
+    }
+
+    .two{
+        width: 90%;
+        height: 600px;
+        background-color:map-get($cards , '--cards-bg-color' ) ;
+        border: 1px solid rgb(167, 166, 166);
+        display: flex;
+        justify-content: space-evenly;
+        align-items:center;
+        box-shadow: 0 0 5px 5px map-get($buttons , '--dark-head' );
+        transition: all 1s ease-in;
+
+        &:hover{
+            box-shadow:none;
+            transform: scale(1.05);
+        }
+    }
+    .two div:nth-child(2){
+        margin-left: 30px;
+    }
+    .two div:nth-child(2) h2{
+        font-size: 30px;
+        margin-bottom: 20px;
+
+    }
+    .two div:nth-child(2) p{
+        font-size: 24px;
+        color:map-get($textdecorate , '--description-texts' )
+    }
+    
+}
+main img{
+    width: 450px;
+}
+@include sm{
+    .one{
+        @include flexBox(column, wrap, center,center,20px);
+        text-align: center;
+    }
+    .one div:nth-child(1){
+        margin-right: 30px;
+    }
+    .two{
+       display: flex;
+       flex-direction: column;
+       text-align: center;
+    }
+    .two div:nth-child(2){
+        margin-right: 30px;
+    }
+    main img{
+        width: 350px;
+    }
+}

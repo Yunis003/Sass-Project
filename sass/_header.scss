@@ -1,0 +1,68 @@
+header{
+    background-image: url(/assets/images/bg-hero-desktop.svg);
+    background-repeat: no-repeat;
+    @include flexBox(column, wrap, center, center, 10px);
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    .first, .last{
+        width: 90%;
+        margin-top:25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+}
+.first button{
+    background-color:map-get($buttons , '--btn-head' );
+    padding: 10px 45px;
+    border-radius: 15px;
+    transition: all .6s ease-in;
+    box-shadow: 0 0 5px 5px map-get($buttons , '--dark-head' );
+
+    &:hover{
+        cursor: pointer;
+        background-color: map-get($buttons , '--dark-head' );
+    }
+}
+.last div:nth-child(1) h1{
+    font-size: 45px;
+}
+.last div:nth-child(1) p{
+    font-size: 18px;
+    color:map-get($textdecorate , '--description-texts' )
+}
+.last div:nth-child(1) .texts{
+    margin-bottom: 15px;
+}
+.last div:nth-child(1) .pink-button{
+    background-color:map-get($buttons , '--btn-main' );
+    padding: 20px 65px;
+    border-radius:15px;
+    font-size: 15px;
+    color:map-get($textdecorate , '--footer-texts' );
+    transition: all .6s ease-in;
+
+    &:hover{
+        background-color:map-get($buttons , '--dark-main' );
+        cursor: pointer;
+    }
+}
+.last div:nth-child(2) img{
+    width: 700px;
+}
+@include sm{
+    .first, .last{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    gap: 50px;
+    }
+    .last div:nth-child(2) img{
+        width: 450px;
+    }
+}
+

@@ -1,0 +1,22 @@
+$buttons: (
+    '--btn-main': #FF69B4,
+    '--btn-head': #FFF,
+    '--dark-main':#d15392 ,
+    '--dark-head': #e4dfdf,
+);
+$textdecorate: (
+    '--main-texts': #000,
+    '--description-texts': #857c7c,
+    '--texts-bold': bold,
+    '--footer-texts': #FFF,
+);
+$cards: (
+    '--cards-bg-color': #FFF
+);
+$parts: (
+    '--footer-bg-color':rgb(1, 37, 1)
+);
+$breakpoints: (
+    'sm':476px,
+    'md':768px
+)
